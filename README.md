@@ -57,7 +57,7 @@ To deploy to your Netlify account, hit the button below.
 Content API Keys are generally not considered to be sensitive information, they exist so that they can be changed in the event of abuse; so most people commit it directly to their `.ghost.json` config file. If you prefer to keep this information out of your repository you can remove this config and set [Netlify ENV variables](https://www.netlify.com/docs/continuous-deployment/#build-environment-variables) for production builds instead.
 For example:
 
-GHOST_API_KEY='9cc5c67c358edfdd81455149d0'
+GHOST_CONTENT_API_KEY='9cc5c67c358edfdd81455149d0'
 
 GHOST_API_URL='https://gatsby.ghost.io'
 
