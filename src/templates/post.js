@@ -1,5 +1,4 @@
 import React from 'react'
-import Gist from 'react-gist'
 import Parser from 'html-react-parser'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
@@ -15,18 +14,6 @@ import { MetaData } from '../components/common/meta'
 const Post = ({ data, location }) => {
     const post = data.ghostPost
 
-    // We're extracting the Gist script tags as they won't be rendered by React
-    const urlRegexString = 'https:\/\/gist.github.com\/(.+)\/(.+)\.js'
-    const urlRegex = new RegExp(urlRegexString)
-
-    const reactHtml = Parser(post.html, {
-        replace: (domNode) => {
-            if (domNode.name === "script") {
-                const [_, username, gistId] = domNode.attribs.src.match(urlRegex)
-                return <Gist id={gistId}/>
-            }
-        }
-    })
 
     return (
             <>
