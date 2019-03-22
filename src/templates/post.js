@@ -1,7 +1,7 @@
 import React from 'react'
-import Parser from 'html-react-parser'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
+
 import { Layout } from '../components/common'
 import { MetaData } from '../components/common/meta'
 
@@ -13,7 +13,6 @@ import { MetaData } from '../components/common/meta'
 */
 const Post = ({ data, location }) => {
     const post = data.ghostPost
-
 
     return (
             <>
@@ -34,9 +33,9 @@ const Post = ({ data, location }) => {
 
                                 {/* The main post content */ }
                                 <section
-                                    className="content-body load-external-scripts">
-                                    { reactHtml }
-                                </section>
+                                    className="content-body load-external-scripts"
+                                    dangerouslySetInnerHTML={{ __html: post.html }}
+                                />
                             </section>
                         </article>
                     </div>
