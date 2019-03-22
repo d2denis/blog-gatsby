@@ -1,0 +1,10 @@
+{
+    "development": {
+    "apiUrl": "https://dudenisu.herokuapp.com",
+    "contentApiKey": "602282f13bb0870817461332c9"
+  },
+"production": {
+    "apiUrl": "https://dudenisu.herokuapp.com",
+    "contentApiKey": "602282f13bb0870817461332c9"
+  }
+}

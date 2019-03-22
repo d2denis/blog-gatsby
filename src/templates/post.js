@@ -3,7 +3,6 @@ import Gist from 'react-gist'
 import Parser from 'html-react-parser'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-
 import { Layout } from '../components/common'
 import { MetaData } from '../components/common/meta'
 

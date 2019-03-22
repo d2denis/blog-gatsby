@@ -2,7 +2,6 @@ const path = require(`path`)
 
 const config = require(`./src/utils/siteConfig`)
 const generateRSSFeed = require(`./src/utils/rss/generate-feed`)
-
 let ghostConfig
 
 try {
@@ -62,6 +61,20 @@ module.exports = {
                     ? ghostConfig.development
                     : ghostConfig.production,
         },
+  {
+    resolve: `gatsby-transformer-remark`,
+    options: {
+      plugins: [
+        {
+          resolve: `gatsby-remark-katex`,
+          options: {
+            // Add any KaTeX options from https://github.com/KaTeX/KaTeX/blob/master/docs/options.md here
+            strict: `ignore`
+          }
+        }
+      ],
+    },
+  },
         /**
          *  Utility Plugins
          */
